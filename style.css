@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --main-color: #494eea;
+}
+body {
+    background-color: #262a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+.app p {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.app input {
+    display: block;
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    outline: none;
+    font-size: 18px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+.app input:focus {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.app input::placeholder {
+    color: #777;
+    font-size: 16px;
+    font-weight: 500;
+}
+.app input.error {
+    animation: shake 0.1s linear 4;
+    border: 1px solid red;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.app #qr-img-box.shown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    transition: all 0.5s;
+}
+.app #qr-img-box.shown img {
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+    transition: all 0.5s;
+}
+.app #qr-img-box.hidden {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 0;
+    transition: all 0.5s;
+}
+.app #qr-img-box.hidden img {
+    width: 150px;
+    height: 0;
+    transition: all 0.5s;
+}
+.app button {
+    display: block;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+.app button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
